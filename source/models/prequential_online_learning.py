@@ -38,7 +38,7 @@ class PrequentialOnlineLearning:
         self.seed = seed
         self.complete_features_list = self.contextual_features_list  + self.hr_features_list +  self.temp_features_list + self.acc_features_list + self.hrv_features_list
         self.BiheartS_dataset_path = BiheartS_dataset_path
-        self.M2sleepDatasetPath = M2sleep_dataset_path
+        self.M2sleep_dataset_path = M2sleep_dataset_path
 
         self.load_datasets()
         self.combine_all_datasets()

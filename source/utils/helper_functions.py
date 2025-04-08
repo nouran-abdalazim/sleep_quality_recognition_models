@@ -216,7 +216,7 @@ def visualize_correlation_heatmap_per_participant(data:pd.DataFrame, correlation
 
 
 def visualize_models_results (title, preqacc_personalized_model_results, 
-                              preqacc_user_specific_model_results, 
+                             
                               acc_population_model_results, 
                               acc_baseline_model_results,  
                               acc_biased_baseline_model_results,
@@ -225,7 +225,6 @@ def visualize_models_results (title, preqacc_personalized_model_results,
     # Combine lists into a dictionary
     data = {
         'Personalized': 100* preqacc_personalized_model_results,
-        'One-User-Only': 100* preqacc_user_specific_model_results,
         'Population': 100* acc_population_model_results,
         'Biased Random Guess': 100* acc_biased_baseline_model_results,
         'Personalized Biased Random Guess': 100* acc_personalized_biased_baseline_model_results,
