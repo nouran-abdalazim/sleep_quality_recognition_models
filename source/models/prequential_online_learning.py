@@ -256,7 +256,6 @@ class PrequentialOnlineLearning:
 
     def recognize_sleep_quality(self, training_dataset, seed_list, testing_dataset, modality, model, featurs_list = [],  mode="single"):
         preqacc_personalized_model_results = []
-        preqacc_user_specific_model_results = []
         acc_population_model_results = []
         acc_baseline_model_results = []
         acc_biased_baseline_model_results = []
