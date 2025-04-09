@@ -148,11 +148,11 @@ def visualize_correlation_heatmap(data:pd.DataFrame, correlationMethod:str = "sp
 
 def visualize_correlation_heatmap_per_participant(data:pd.DataFrame, correlationMethod:str = "spearman", participantsList = [], title:str = "", xlabel:str = "", ylabel:str = "", yaxisParameters = [], dataset_name = "", export_correlation_results  = False) -> (plt):
     """
-        The function computes the spearman correlation coefficient along with the p-value between all the columns of the provided
+        The function computes the correlation coefficient along with the p-value between all the columns of the provided
         dataframe
 
         Args: 
-            data (pd.DataFrame): represents the dataframe to compute the correlation for it, it must include a column for the participant_id
+            data (pd.DataFrame): represents the dataframe to compute the correlation for it, it must include a column for the participant_id as index
             correlationMethod (string): represent the name of the correlation method (spearman, kendall, pearson)
             removeDuplicates (bool): represent the option of removing duplicate values in heatmap
 
@@ -196,7 +196,7 @@ def visualize_correlation_heatmap_per_participant(data:pd.DataFrame, correlation
 
 
     # Create a Seaborn heatmap
-    _, ax = plt.subplots(figsize=(35, 8))
+    _, ax = plt.subplots(figsize=(35, 15))
 
     # Use vectorized operations to format and apply conditional logic
     vectorized_format = np.vectorize(lambda c, p: f'{c:.2f}*' if p < 0.05 else f'{c:.2f}')
